@@ -4,7 +4,7 @@ cd src
 ```
 ### Install req:
 ```
-nom -i
+npm -i
 ```
 ### Run app (from root dir) on <b>localhost:3000</b> :
 ```
