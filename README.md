@@ -2,7 +2,7 @@
 ```
 cd src
 ```
-### Install req:
+### Install requirements(optional):
 ```
 npm -i
 ```
