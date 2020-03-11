@@ -1,3 +1,8 @@
+##ATTENTION - Node.js MUST BE PREINSTALLED!!! (No Docker)
+```
+https://nodejs.org/en/download/
+```
+
 ### Switch to Root dir (src):
 ```
 cd src
