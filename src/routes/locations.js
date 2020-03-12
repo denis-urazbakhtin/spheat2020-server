@@ -73,70 +73,70 @@ var out_address=[{
         image: "//////"
     },
     {
-        gps: [125643434566,2392343453424],
+        gps: [59.9349492,30.3065704],
         address: "Voznesensky Prospekt, 6",
         name: "Cococo",
         description: "French cuisine restaurant",
         image: "//////"
     },
     {
-        gps: [125643454566,2392343453424],
+        gps: [59.9415174,30.2774663],
         address: "Kadetskaya liniya Vasilevskogo Ostrova, 29",
         name: "Hachapuri i Vino",
         description: "Georgian restaurant",
         image: "//////"
     },
     {
-        gps: [125643454566,2392343453424],
+        gps: [59.9471053,30.2822571],
         address: "Kadetskaya liniya Vasilevskogo Ostrova, 29",
         name: "LE MONITEUR Cafe",
         description: "Cafeteria",
         image: "//////"
     },
     {
-        gps: [125645454566,2392343454524],
+        gps: [59.945291,30.2844183],
         address: "Kadetskaya liniya Vasilevskogo Ostrova, 25",
         name: "Gril#Factory",
         description: "Burger joint",
         image: "//////"
     },
     {
-        gps: [125643454566,2392343453424],
+        gps: [59.9449976,30.2864986],
         address: "Tuchkov pereulok, 11/5",
         name: "Villaggio",
         description: "Italian restaurant",
         image: "//////"
     },
     {
-        gps: [125643454566,2392343453424],
+        gps: [59.9449929,30.2536679],
         address: "Srednij prospekt Vasilevskogo Ostrova, 6",
         name: "Mama Roma",
         description: "Pizzeria",
         image: "//////"
     },
     {
-        gps: [125643454566,2392343453424],
+        gps: [59.9449836,30.2536679],
         address: "4ay liniay Vasilevskogo Ostrova, 5",
         name: "Staryj Tbilisi",
         description: "Georgian restaurant",
         image: "//////"
     },
     {
-        gps: [125643454566,2392343453424],
+        gps: [59.9143559,30.3532643],
         address: "Nevsky prospekt, 38/4",
         name: "#FARШ",
         description: "Burger joint",
         image: "//////"
     },
     {
-        gps: [125643454566,2392343453424],
+        gps: [59.9143188,30.3532642],
         address: "Malaya Morskaya ulica, 7",
         name: "Bushe",
         description: "Cafeteria",
         image: "//////"
     },
     {
-        gps: [125643454566,2392343453424],
+        gps: [59.9142817,30.3532641],
         address: "Srednij prospekt Vasilevskogo Ostrova, 28",
         name: "Kontakt Bar",
         description: "Bar",
