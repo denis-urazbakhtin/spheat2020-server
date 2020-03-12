@@ -145,7 +145,8 @@ var out_address=[{
 ]
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    res.json(out_address);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify(out_address,null, 3));
 });
 
 module.exports = router;
