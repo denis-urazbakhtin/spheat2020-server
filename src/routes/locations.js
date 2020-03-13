@@ -3,7 +3,7 @@ var router = express.Router();
 var out_address=[{
     gps: [12313123,234234234],
     address: "Ligovsky prospekt, 26",
-    name: "Du Nord 1834dunord.",
+    name: "Du Norddunord.",
     description: "French cuisine restaurant",
     image: "//////"
 
