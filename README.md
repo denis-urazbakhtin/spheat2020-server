@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 Test 1-2-3
 
 
+||||||| merged common ancestors
+=======
+## ATTENTION - Node.js MUST BE PREINSTALLED!!! (No Docker)
+```
+https://nodejs.org/en/download/
+```
+
+>>>>>>> origin/master
 ### Switch to Root dir (src):
 ```
 cd src
