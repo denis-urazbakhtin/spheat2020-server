@@ -4,5 +4,122 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  font-weight: 400;
+  font-size: 17px
+}
+
+button{
+  color: red;
+  background: green;
+}
+
+.admonition {
+  align: right;
+  margin: 24px 0;
+  width: auto;
+  max-width: 100%;
+  padding: 20px 19px 22px;
+  border-top: 5px solid transparent;
+}
+
+.code {
+  align: right;
+  margin: 0px 0;
+  width: auto;
+  max-width: 100%;
+  padding: 12px 6px 12px;
+  border-left: 4px solid transparent;
+  background-color: #EBEBEB;
+  border-color: #34C64A;
+  font-size: 15px
+
+}
+
+.code-out {
+  align: right;
+  margin: 0px 0;
+  width: auto;
+  max-width: 100%;
+  padding: 12px 6px 12px;
+  border-left: 4px solid transparent;
+  background-color: #EBEBEB;
+  border-color: #00DCEC;
+  font-size: 14px
+
+}
+
+.code-link {
+  align: right;
+  margin: 0px 0;
+  width: auto;
+  max-width: 100%;
+  padding: 12px 6px 12px;
+  border-left: 4px solid transparent;
+  background-color: #EBEBEB;
+  border-color: #900C3F ;
+  font-size: 14px
+
+}
+
+.admonition-internal {
+  align: right;
+  margin: 9px 0;
+  width: auto;
+  max-width: 100%;
+  padding: 5px 12px 22px;
+
+}
+
+
+
+div.admonition.warning {
+  background-color: #F6F4F4;
+  border-color: #584848;
+}
+
+div.admonition-internal.explain {
+  background-color: #FAF9F9;
+  border-color: #34C64A;
+}
+
+
+.first {
+  margin-top: 0!important;
+}
+
+p.admonition-bod {
+  margin: 0 10px 5px 0;
+  font-weight: 700;
+  font-size: 40px
+}
+
+p.admonition-internal {
+  margin: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 17px
+}
+
+p.admonition-internal {
+  margin-top: 4%;
+  margin-bottom: 1%;
+  font-weight: 800;
+  font-size: 25px
+}
+
+p.title-internal {
+  font-weight: 400;
+  font-size: 17px
+}
+
+p.title-internal-1 {
+  font-weight: 400;
+  font-size: 17px
+}
+
+code {
+  width: 100%;
+  min-height: 30rem;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 0.8rem;
+  line-height: 1.2;
 }

@@ -3,11 +3,19 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const mongoose = require('mongoose')
+require('./config')
 
 var indexRouter = require('./routes/index');
-var usersLocations = require('./routes/locations');
+var locationsRouter= require('./routes/locations');
+var temperatureRouter =  require('./routes/temperature');
 
 var app = express();
+//
+mongoose.connect(DATABASE_URL, { useNewUrlParser: true })
+const db = mongoose.connection
+db.on('error', (error) => console.error(error))
+db.once('open', () => console.log('connected to database'))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -20,7 +28,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/locations', usersLocations);
+app.use('/locations/', locationsRouter);
+app.use('/temperatures/', temperatureRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,5 +1,61 @@
-extends layout
+doctype html
+html
+    head
+        title= 'Navigation'
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        block content
+            div(class='admonition warning')
+                p(class='first admonition-bod') Welcome to Navigation
+                div(class='code-link')
+                    a(href='http://localhost:3000/temperatures') Temperatures
+                p
+                div(class='code-link')
+                    a(href='http://localhost:3000/locations') Locations
 
-block content
-  h1= title
-  p Welcome to #{title}
+            div(class='admonition warning')
+                p(class='first admonition-bod') Documentation
+                div(class='admonition-internal explain')
+                    p(class='admonition-internal') Locations
+                    p(class='title-internal') 1. Get all locations in JSON format:
+                    div(class='code') http://localhost:3000/locations
+                    p(class='title-internal') 2. Get one location by id:
+                    div(class='code') http://localhost:3000/locations/{id}
+                    p(class='title-internal-1') Example:
+                    div(class='code') http://localhost:3000/locations/5e6bcf3955d0ee36c0cb868a
+                    p(class='title-internal-1') Output:
+                    div(class='code-out') <pre> [
+                        |
+                        |    {
+                        |       "gps": [9.9403511,30.3165473],
+                        |       "_id": "5e6bcf3955d0ee36c0cb868a",
+                        |       "address": "Naberezhnaya reki Mojki, 37",
+                        |       "name": "Rasputin",
+                        |       "description": "Russian cuisine restaurant",
+                        |       "image": "//////"
+                        |    }
+                        | ]
+                    p(class='admonition-internal') Temperature
+                    p(class='title-internal') 1. Get all temperatures in JSON format:
+                        div(class='code') http://localhost:3000/temperatures
+                    p(class='title-internal') 2. Post temperature into server:
+                    p(class='title-internal') Post URL:
+                        div(class='code') http://localhost:3000/temperatures
+                    p(class='title-internal') Post body format:
+                        div(class='code') {"temperature": 30.5}
+                    p(class='title-internal-1') If data is uploaded successfully server will return message "Good, data was received" and a new object will be created on the next format:
+                        div(class='code-out') <pre>{
+                            |
+                            |    "_id": "5e6e44b793177d046c1ca1fc",
+                            |    "temperature": 90,
+                            |    "date": "2020-03-15T15:07:35.624Z",
+                            |    "date_week": 0 // Numeric number in range 0-6 ( Sunday-Saturday )
+                            | }
+
+
+
+
+
+    //select
+    //  each val in menu
+    //    option= val.temperature
