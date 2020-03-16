@@ -17,7 +17,7 @@ router.post('/debug', async function(req, res, next) {
         const weeks=req.body.week
         // Unpack week
         if (weeks.length===2){
-            var week_rest = week
+            var week_rest = weeks
         }else{
             var week_rest =[weeks,weeks]
         }

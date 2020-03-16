@@ -31,7 +31,7 @@ button{
   border-left: 4px solid transparent;
   background-color: #EBEBEB;
   border-color: #34C64A;
-  font-size: 15px
+  font-size: 14px
 
 }
 
@@ -115,6 +115,12 @@ p.title-internal-1 {
   font-weight: 400;
   font-size: 17px
 }
+
+p.title-an{
+  font-weight: 400;
+  font-size: 14px
+}
+
 
 code {
   width: 100%;

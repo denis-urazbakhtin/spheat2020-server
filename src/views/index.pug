@@ -6,23 +6,24 @@ html
     body
         block content
             div(class='admonition warning')
-                p(class='first admonition-bod') Welcome to Navigation
-                div(class='code-link')
-                    a(href='http://localhost:3000/temperatures') Temperatures
-                p
-                div(class='code-link')
-                    a(href='http://localhost:3000/locations') Locations
+                div(class='admonition-internal explain')
+                    p(class='first admonition-bod') Welcome to Navigation
+                    div(class='code-link')
+                        a(href=root +'/temperatures') Temperatures
+                    p
+                    div(class='code-link')
+                        a(href=root +'/locations') Locations
 
             div(class='admonition warning')
                 p(class='first admonition-bod') Documentation
                 div(class='admonition-internal explain')
                     p(class='admonition-internal') Locations
                     p(class='title-internal') 1. Get all locations in JSON format:
-                    div(class='code') http://localhost:3000/locations
+                    div(class='code') #{root}/locations
                     p(class='title-internal') 2. Get one location by id:
-                    div(class='code') http://localhost:3000/locations/{id}
+                    div(class='code') #{root}/locations/{id}
                     p(class='title-internal-1') Example:
-                    div(class='code') http://localhost:3000/locations/5e6bcf3955d0ee36c0cb868a
+                    div(class='code') #{root}/locations/5e6bcf3955d0ee36c0cb868a
                     p(class='title-internal-1') Output:
                     div(class='code-out') <pre> [
                         |
@@ -37,12 +38,13 @@ html
                         | ]
                     p(class='admonition-internal') Temperature
                     p(class='title-internal') 1. Get all temperatures in JSON format:
-                        div(class='code') http://localhost:3000/temperatures
+                        div(class='code') #{root}/temperatures
                     p(class='title-internal') 2. Post temperature into server:
                     p(class='title-internal') Post URL:
-                        div(class='code') http://localhost:3000/temperatures
+                        div(class='code') #{root}/temperatures
                     p(class='title-internal') Post body format:
-                        div(class='code') {"temperature": 30.5}
+                        div(class='code') [{"temperature": 30.5}]
+                        p(class='title-an') *Also, it is possible to upload several temperatures in the same time:
                     p(class='title-internal-1') If data is uploaded successfully server will return message "Good, data was received" and a new object will be created on the next format:
                         div(class='code-out') <pre>{
                             |
@@ -51,6 +53,65 @@ html
                             |    "date": "2020-03-15T15:07:35.624Z",
                             |    "date_week": 0 // Numeric number in range 0-6 ( Sunday-Saturday )
                             | }
+                    p(class='title-internal') Get temperatures by filter
+                    p(class='title-internal') Getting temperature by filter performs thru POST request on link:
+                        div(class='code') #{root}/temperatures/debug
+                    p(class='title-internal') Example:
+                        div(class='code') <pre>{
+                            |     "week":[0,6],
+                            |     "temperature":[0,70]
+                            | }
+                    p(class='title-internal') Result:
+                        div(class='code-out') <pre>[
+                            |     {
+                            |         "_id": "5e6ce9a2f1467e4d78bc30f1",
+                            |         "temperature": 30.5,
+                            |         "date_week": 2,
+                            |         "date": "2020-03-14T14:26:42.066Z"
+                            |     },
+                            |     {
+                            |         "_id": "5e6ce9ff8c76e54e2759ddbd",
+                            |         "temperature": 30.5,
+                            |         "date_week": 6,
+                            |         "date": "2020-03-14T14:28:15.653Z"
+                            |     }
+                            |]
+                    p(class='title-internal') Note: Data format is input JSON should be performed as interval (Array). How ever it is possible to use a number instead.
+                    p(class='title-internal') Example:
+                        div(class='code') <pre>{
+                            |
+                            |     "week":6,
+                            |     "temperature":35.5
+                            | }
+                    p(class='title-internal') Result:
+                        div(class='code-out') <pre>[
+                            |
+                            |     {
+                            |         "_id": "5e6ce9ff8c76e54e2759ddbd",
+                            |         "temperature": 30.5,
+                            |         "date_week": 6,
+                            |         "date": "2020-03-14T14:28:15.653Z"
+                            |     },
+                            |     {
+                            |         "_id": "5e6ceaddde4c914f81afd1db",
+                            |         "temperature": 30.5,
+                            |         "date_week": 6,
+                            |         "date": "2020-03-14T14:31:57.564Z"
+                            |     }
+                            | ]
+                    p(class='title-internal') You also can combine intervals with numbers. For instance, if you want to get all temperatures, which are equal 30.5 and written on Friday - Saturday, you should use next JSON:
+                        div(class='code') <pre>{
+                            |
+                            |     "week":[5,6],
+                            |     "temperature":30.5
+                            | }
+
+
+
+
+
+
+
 
 
 
