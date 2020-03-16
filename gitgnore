@@ -1,9 +1,4 @@
-# idea env
-.idea/
-srs/.idea/
 
-# Nodelib
-src/node_modules/
 
 
 
