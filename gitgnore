@@ -1,1 +1,9 @@
-/.idea
+# idea env
+.idea/
+src/.idea/
+.idea
+
+# Nodelib
+src/node_modules/
+
+

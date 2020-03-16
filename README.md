@@ -1,34 +1,57 @@
-## ATTENTION - Node.js MUST BE PREINSTALLED!!! (No Docker)
+## ATTENTION - Node.js and MongoDb MUST BE PREINSTALLED!!! (No Docker)
 ```
 https://nodejs.org/en/download/
+https://www.mongodb.com/
 ```
 
-### Switch to Root dir (src):
+### Switch to App Root dir (src):
 ```
 cd src
 ```
-### Install requirements(optional):
+### Config file src/config.js
 ```
-npm -i
+DATABASE_URL - MongoDb connection link
+ROOT_URL - link for http adress, uses only for fitting index.pug (Navigation page)
 ```
-### Run app (from root dir) on <b>localhost:3000</b> :
+
+### Install requirements(optional), run from src:
+```
+npm i
+```
+### Run app (from root dir) on <b>localhost:3000</b>. Note: MongoDb must be run before app.js :
 ```
 npm start app.js
 ```
 
 ### Routers:
 ```
-"/" - "Hello world"
-"/locations" - Provides with an array of 20 locations in Json format
+"/" - "Navigation and Documentation page"
+"/locations" - Provides with all locations in Database
+"/temperatures" - Provides with all temperatures in Database
+"/temperatures/debug" - Provides with temperarures by filter
 ```
-### Json locations format:
+### Json output formats:
+#### Locations:
 ```
-{ 
-    gps: [12234313,234234], - gps cords, an array
-    address: "7ay liniay Vasilevskogo Ostrova, 24",  - address, str
-    name: "Na Parah", - rest name, str
-    description: "Restaurant of healthy food", - rest discription str
-    image: "//////" - link (or path) on image in server
+{
+      "gps": [
+         59.9347212,
+         30.3506727
+      ],
+      "_id": "5e6bcf3955d0ee36c0cb8684",
+      "address": "Ligovsky prospekt, 26",
+      "name": "Du Nord 1834",
+      "description": "French cuisine restaurant",
+      "image": "//////"
+}
+```
+#### Temperatures:
+```
+{
+      "_id": "5e6ceb171abd894fdd2742c5",
+      "temperature": 87.5,
+      "date": "2020-03-14T14:32:55.131Z",
+      "date_week": 6
 }
 ```
  
