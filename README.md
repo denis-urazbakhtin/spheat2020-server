@@ -16,7 +16,7 @@ ROOT_URL - link for http adress, uses only for fitting index.pug (Navigation pag
 
 ### Install requirements(optional), run from src:
 ```
-npm -i
+npm i
 ```
 ### Run app (from root dir) on <b>localhost:3000</b>. Note: MongoDb must be run before app.js :
 ```
