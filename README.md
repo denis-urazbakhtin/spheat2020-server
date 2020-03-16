@@ -11,7 +11,7 @@ cd src
 ### Config file src/config.js
 ```
 DATABASE_URL - MongoDb connection link
-ROOT_URL - link for http adress, uses only for fitting of index.pug (Navigation page)
+ROOT_URL - link for http adress, uses only for fitting index.pug (Navigation page)
 ```
 
 ### Install requirements(optional), run from src:
