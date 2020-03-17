@@ -28,7 +28,7 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const subscribers = await Temp.insertMany(req.body,function(error, docs) {})
+        const subscribers = await Locations.insertMany(req.body,function(error, docs) {})
         res.send('Good, data was received' );
     } catch (err) {
         res.status(500).json({ message: err.message })
